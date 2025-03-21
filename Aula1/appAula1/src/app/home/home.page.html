@@ -28,12 +28,17 @@
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
+
+  <br>
+  <h3>Noval Lista</h3>
   <ion-list>
     <!-- Loo através do array 'itens' para exibir os itens -->
-    <ion-item *ngFor="let item of itens">
-      <ion-label>{{item.nome}}</ion-label>
+    <ion-item *ngFor="let item2 of itens" (click)="irParaPagina(item2.url)">
+      <ion-label>{{item2.nome}}</ion-label>
     </ion-item>
   </ion-list>
+
+
   <ion-card style="text-align: center;">
     <img alt="Xampsom" src="..\..\assets\img\Xab.png"/>
     <ion-card-header>

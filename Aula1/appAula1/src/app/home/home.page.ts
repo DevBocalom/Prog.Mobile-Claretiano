@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { IonAlert, IonButton, ToastController } from '@ionic/angular/standalone';
+import { Router } from '@angular/router'; //importa o Router para navegação
+import { IonAlert, IonButton} from '@ionic/angular/standalone';
+import { ToastController } from '@ionic/angular/standalone';
+//import { UserService } from '../api/user.service';
 
 @Component({
   selector: 'app-home',
@@ -10,16 +12,21 @@ import { IonAlert, IonButton, ToastController } from '@ionic/angular/standalone'
 })
 export class HomePage {
   alertButtons = ['Action'];
-  constructor(private toastController: ToastController, private router: Router) {}
+
+  nomeUser = ''
+  
+  constructor(
+    private toastController: ToastController, 
+    private router: Router, 
+    /*private dadoUsers: UserService*/ ) {}
 
   itens = [
-    {nome: 'Produtos'},
-    {nome: 'Clientes'},
-    {nome: 'Usuarios'},
-    {nome: 'Categorias'},
-    {nome: 'Pedidos'},
-    {nome: 'Cargos'},
-    {nome: 'Xampsom'}
+    {nome: 'Produtos', url: '/produtos'},
+    {nome: 'Clientes', url: '/clientes'},
+    {nome: 'Usuarios', url: '/usuarios'},
+    {nome: 'Categorias', url: '/categorias'},
+    {nome: 'Pedidos', url: '/pedidos'},
+    {nome: 'Cargos', url: '/cargos'}
   ];
 
   async apresentarToast(position: 'top' | 'middle' | 'bottom') {
@@ -30,6 +37,11 @@ export class HomePage {
     });
 
     await toast.present();
+  }
+
+  //função para navegar para a página selecionada
+  irParaPagina(url: string){
+    this.router.navigate([url]);//Navega para URL correspondente
   }
 
 }
