@@ -1,0 +1,7 @@
+{
+  "name": "ExPratico",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
