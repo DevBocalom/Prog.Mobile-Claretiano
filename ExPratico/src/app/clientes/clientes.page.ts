@@ -12,7 +12,19 @@ export class ClientesPage implements OnInit {
   constructor(
     private router: Router,
   ) { }
-
+  clientes = [
+    {nome: 'Joaquim Prado',},
+    {nome: 'Joana Julesca',},
+    {nome: 'Enes Erevaldo',},
+    {nome: 'Julio Jeferson',},
+    {nome: 'Diego Domingo',},
+    {nome: 'Breno Segunda-feira',},
+    {nome: 'Carlos Quinta-feira',},
+    {nome: 'Bruno Montanha',},
+    {nome: 'Adilson Pernas de Alicate',},
+    {nome: 'Tulio Mão de Alface',},
+    {nome: 'Adalberto Pé de Bosta',},
+  ];
   ngOnInit() {
   }
 

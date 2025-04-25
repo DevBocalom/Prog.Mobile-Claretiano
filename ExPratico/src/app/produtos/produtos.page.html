@@ -31,5 +31,11 @@
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
-
+    <ion-card *ngFor="let produto of produtos">
+      <img alt="alt imagem" [src]="produto.img" style="display: block; margin: 0 auto; width: auto; height: auto; max-height: 200px; align-items: ;" />
+      <ion-card-header>
+        <ion-card-title style="text-align: center;">{{produto.nome}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content style="text-align: center;">{{produto.desc}}</ion-card-content>
+    </ion-card>
 </ion-content>

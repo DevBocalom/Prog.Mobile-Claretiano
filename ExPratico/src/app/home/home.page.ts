@@ -22,6 +22,3 @@ export class HomePage {
     this.router.navigate([url]);
   }  
 }
-
-
-
