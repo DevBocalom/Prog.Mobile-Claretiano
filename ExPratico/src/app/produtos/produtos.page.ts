@@ -39,5 +39,9 @@ export class ProdutosPage implements OnInit {
   irParaClientes() {
     this.router.navigate(['/clientes']); // Certifique-se de que essa rota existe no app-routing.module.ts
   }
-
+  ionViewDidLeave() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  }  
 }

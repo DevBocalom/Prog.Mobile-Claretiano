@@ -20,5 +20,11 @@ export class HomePage {
 
   irParaPagina(url: string){
     this.router.navigate([url]);
-  }  
+  }
+  ionViewDidLeave() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  }
+    
 }

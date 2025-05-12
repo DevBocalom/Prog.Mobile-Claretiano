@@ -41,5 +41,10 @@ export class LoginPage implements OnInit {
     this.login = '';
     this.senha = '';
   }
+  ionViewDidLeave() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  }  
 }
 
