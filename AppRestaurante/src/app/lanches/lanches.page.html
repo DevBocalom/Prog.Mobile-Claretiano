@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lanches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Lanches</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button *ngFor="let item of itens" (click)="irParaPagina(item.url)">
+        <ion-icon [name]="item.icone"></ion-icon>
+        <ion-label>{{ item.nome }}</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
