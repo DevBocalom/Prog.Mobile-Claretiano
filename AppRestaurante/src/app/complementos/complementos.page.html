@@ -10,13 +10,23 @@
       <ion-title size="large">Complementos</ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button *ngFor="let item of itens" (click)="irParaPagina(item.url)">
-        <ion-icon [name]="item.icone"></ion-icon>
-        <ion-label>{{ item.nome }}</ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+  <ion-card *ngFor="let complemento of complementos">
+    <img  style="display: block; margin: 0 auto; width: auto; height: auto; max-height: 200px; align-items: center;" [alt]="complemento.altimg" [src]="complemento.img"/>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">{{complemento.titulo}}</ion-card-title>
+      <ion-card-subtitle style="text-align: center;">{{complemento.subtitulo}}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button *ngFor="let item of itens" (click)="irParaPagina(item.url)">
+          <ion-icon [name]="item.icone"></ion-icon>
+          <ion-label>{{ item.nome }}</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

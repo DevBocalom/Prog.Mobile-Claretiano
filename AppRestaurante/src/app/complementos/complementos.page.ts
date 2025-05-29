@@ -20,6 +20,35 @@ export class ComplementosPage implements OnInit {
     { nome: 'Complementos', url: '/complementos', icone: 'add-circle' },
   ];
 
+complementos = [
+  {
+    titulo: 'Molho Barbecue',
+    subtitulo: 'R$ 2,00',
+    img: 'assets/img/barbecue.jpg',
+    altimg: 'Imagem de molho barbecue'
+  },
+  {
+    titulo: 'Batata Frita',
+    subtitulo: 'R$ 7,50',
+    img: 'assets/img/batata-frita.jpeg',
+    altimg: 'Imagem de batata frita'
+  },
+  {
+    titulo: 'Queijo Extra',
+    subtitulo: 'R$ 3,00',
+    img: 'assets/img/queijo-extra.jpeg',
+    altimg: 'Imagem de queijo ralado'
+  },
+  {
+    titulo: 'Bacon Crocante',
+    subtitulo: 'R$ 3,50',
+    img: 'assets/img/bacon-crocante.jpg',
+    altimg: 'Imagem de bacon crocante'
+  }
+];
+
+
+
   irParaPagina(url: string) {
     this.router.navigate([url]);
   }
